@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StopTimeService, updateTimeService} from "../timeService";
+import {StopTimeService, updateTimeService} from "../../timeService";
 import {connect} from "react-redux";
 
 
@@ -16,7 +16,8 @@ class ResetButton extends Component {
     }
     render() {
         return(
-            <button onClick={this.handleReset} >RESET</button>
+            // disable at start and at pause(timer holds some value and timeris not running )
+            <button onClick={this.handleReset} disabled={this.props.reset_dis} className="btn ">RESET</button>
         )
     }
 }
@@ -24,7 +25,8 @@ class ResetButton extends Component {
 const mapStateToProps = (state)=>{
     return{
         time:state.time,
-        isTimerRunning:state.isTimerRunning
+        isTimerRunning:state.isTimerRunning,
+        reset_dis:state.reset_dis
     }
 }
 

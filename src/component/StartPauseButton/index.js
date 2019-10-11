@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StopTimeService, updateTimeService} from "../timeService";
+import {StopTimeService, updateTimeService} from "../../timeService";
 import {connect} from "react-redux";
 
 
@@ -19,7 +19,7 @@ class StartPauseButton extends Component {
 
     render() {
         return(
-            <button onClick={this.handleStart} >{this.props.isTimerRunning ? "PAUSE" : "START"} </button>
+            <button onClick={this.handleStart} className="btn "  >{this.props.isTimerRunning ? "PAUSE" : "START"}  </button>
         )
     }
 }

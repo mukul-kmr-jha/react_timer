@@ -1,0 +1,144 @@
+.App {
+  text-align: center;
+}
+
+.btn{
+  color: white;
+  padding: 15px;
+  background-color: cadetblue;
+  border-radius: 43px;
+  width: 120px;
+  font-size: 1.05rem;
+  margin: 10px;
+
+  &:focus{
+    outline:none;
+  }
+  &:disabled{
+    background-color: #a9c8d4a3;
+    border: 2px solid #1f627ca3;
+  }
+
+  &Cont{
+    margin-top: 30px;
+
+  }
+
+}
+
+.timer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: antiquewhite;
+  height: 420px;
+  overflow: auto;
+
+  &--heading{
+    display: inline-block;
+    padding: 15px 25px;
+    background: aquamarine;
+    color: crimson;
+    font-weight: 200;
+    box-shadow: 4px 5px 8px black;
+
+  }
+
+  &--count {
+     font-weight: 200;
+
+      &__main {
+         font-size: 5rem;
+       }
+
+      &__min {
+         font-size: 3rem;
+
+       }
+   }
+}
+
+.lap{
+  width:100%;
+  background: antiquewhite;
+  //height: 550px;
+  overflow-y: scroll;
+
+  &Cont{
+    overflow-y: scroll;
+  }
+
+  ul {
+    padding:0;
+    list-style: none;
+  }
+  &--item{
+    padding:10px 0;
+    &:hover{
+      background: aliceblue;
+    }
+  }
+  &_font_max{
+    font-size: 1.7rem;
+    font-weight: 200;
+    & :hover{
+
+    }
+  }
+  &_font_min{
+    //font-size: 1.01 rem;
+
+  }
+
+}
+
+.heading--cont{
+  background: teal;
+  padding:15px;
+
+}
+.left{
+  border-right: 7px solid teal;
+  padding: 120px 0;
+  padding-bottom: 90px;
+  /*height: 550px;*/
+
+}
+
+.footer--cont{
+  background: teal;
+  padding:6px;
+  color:white;
+  padding:20px;
+  text-shadow:
+          0 1px 0px #378ab4,
+          1px 0 0px #5dabcd,
+          1px 2px 1px #378ab4,
+          2px 1px 1px #5dabcd,
+          2px 3px 2px #378ab4,
+          3px 2px 2px #5dabcd,
+          3px 4px 2px #378ab4,
+          4px 3px 3px #5dabcd,
+          4px 5px 3px #378ab4,
+          5px 4px 2px #5dabcd,
+          5px 6px 2px #378ab4,
+          6px 5px 2px #5dabcd,
+          6px 7px 1px #378ab4,
+          7px 6px 1px #5dabcd,
+          7px 8px 0px #378ab4,
+          8px 7px 0px #5dabcd;
+
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .timer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-rows-gap:20px;
+    height:auto;
+    overflow: auto;
+}
+}

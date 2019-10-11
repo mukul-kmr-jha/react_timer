@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {StopTimeService, updateTimeService} from "../timeService";
+import {StopTimeService, updateTimeService} from "../../timeService";
 import {connect} from "react-redux";
-
 
 class LapButton extends Component {
 
@@ -16,7 +15,7 @@ class LapButton extends Component {
     }
     render() {
         return(
-            <button onClick={this.handleLap} >LAP</button>
+            <button onClick={this.handleLap} disabled={!this.props.isTimerRunning} className="btn " >LAP</button>
         )
     }
 }

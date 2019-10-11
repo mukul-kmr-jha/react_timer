@@ -1,10 +1,14 @@
 const initState = {
     isTimerRunning:false,
     time:0,
-    laps:[]
+    laps:[],
+    reset_dis:true
 }
 
 let timer_ref;
+class Actions {
+    static UpdateTimerClock = 'UPDATE'
+}
 
 const rootReducer=(state=initState, action)=>{
     switch (action.type) {
@@ -13,22 +17,20 @@ const rootReducer=(state=initState, action)=>{
             return{
                 ...state,
                 time: action.payload,
-                isTimerRunning: true
+                isTimerRunning: true,
+                reset_dis: true
             }
 
         }
         case 'PAUSE':{
             return{
                 ...state,
-            isTimerRunning:false
+            isTimerRunning:false,
+                reset_dis:false
             }
         }
         case 'RESET':{
-            return{
-                ...state,
-                time:0,
-                isTimerRunning: false
-            }
+            return initState
         }
         case 'ADD_LAP':{
             return {
