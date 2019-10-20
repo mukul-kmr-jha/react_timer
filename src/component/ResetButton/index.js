@@ -15,6 +15,7 @@ class ResetButton extends Component {
         }
     }
     render() {
+        console.log("ReesetDisabled is ", this.props.reset_dis);
         return(
             // disable at start and at pause(timer holds some value and timeris not running )
             <button onClick={this.handleReset} disabled={this.props.reset_dis} className="btn ">RESET</button>
