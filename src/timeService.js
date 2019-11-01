@@ -7,6 +7,10 @@ export const updateTimeService = time => {
   if (!timer_ref) {
     timer_ref = setInterval(() => {
       time += 1;
+      if (time==50){
+        console.log("Log Just before Error!");
+        throw new Error('Error from Timer service!');
+      }
       store.dispatch({ type: "UPDATE", payload: time });
       // console.log(time);
     }, 100);
